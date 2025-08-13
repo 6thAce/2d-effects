@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl8skvyjo5teh"]
+
+[ext_resource type="PackedScene" uid="uid://bf3qp3mkblhji" path="res://game.tscn" id="1_u43s0"]
+[ext_resource type="Shader" uid="uid://bcs4jqhsftjbe" path="res://Blink.gdshader" id="2_11vou"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wgp0n"]
+shader = ExtResource("2_11vou")
+shader_parameter/blink_color = Color(1, 1, 1, 1)
+shader_parameter/blink_intensity = 1.0
+
+[node name="Root" type="Node2D"]
+
+[node name="Game" parent="." instance=ExtResource("1_u43s0")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Game"]
+material = SubResource("ShaderMaterial_wgp0n")

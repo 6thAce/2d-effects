@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://blgy8i0cyw3or"]
+
+[ext_resource type="Script" uid="uid://die46alryn15o" path="res://ray_cast_2d.gd" id="1_wtcfe"]
+
+[node name="Lazer" type="Node2D"]
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(15, 339)
+target_position = Vector2(1000, 0)
+script = ExtResource("1_wtcfe")
+
+[node name="Line2D" type="Line2D" parent="RayCast2D"]
+points = PackedVector2Array(0, 0, 100, 0)
+default_color = Color(0.468831, 0.00200022, 0.722048, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RayCast2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RayCast2D/StaticBody2D"]

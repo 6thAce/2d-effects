@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5vv2yl3cvrwl"]
+
+[ext_resource type="Script" uid="uid://biobw4roswx37" path="res://player.gd" id="1_yuydt"]
+[ext_resource type="PackedScene" uid="uid://ddy5mudr5j7ef" path="res://enemy.tscn" id="2_3to15"]
+[ext_resource type="PackedScene" uid="uid://bf3qp3mkblhji" path="res://game.tscn" id="3_xx0pb"]
+[ext_resource type="PackedScene" uid="uid://blgy8i0cyw3or" path="res://node_2d.tscn" id="4_e1h82"]
+
+[node name="gorup" type="Node2D"]
+script = ExtResource("1_yuydt")
+
+[node name="Enemy" parent="." instance=ExtResource("2_3to15")]
+
+[node name="Game" parent="." instance=ExtResource("3_xx0pb")]
+
+[node name="Lazer" parent="." instance=ExtResource("4_e1h82")]
